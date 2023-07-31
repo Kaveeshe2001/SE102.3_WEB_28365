@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Box</title>
+</head>
+<body>
+    <button id="google_btn">Google</button>
+
+    <script>
+        const google_btn = document.getElementById("google_btn");
+
+        google_btn.addEventListener("click", () => {
+            // Show the confirm box
+            const confirmed = window.confirm("Do you want to visit Google?");
+
+            if (confirmed) {
+                window.location.href = "https://www.google.com";
+            } else {
+                window.alert("You decided to stay.");
+            }
+        });
+    </script>
+</body>
+</html>

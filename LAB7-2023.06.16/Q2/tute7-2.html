@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+  <script>
+    // Function to calculate total and average
+    function calculateAverage() {
+      // Prompt user for 5 marks
+      var marks = [];
+      for (var i = 1; i <= 5; i++) {
+        var mark = parseFloat(prompt('Enter mark ' + i + ':'));
+        marks.push(mark);
+      }
+
+      // Calculate total
+      var total = 0;
+      for (var j = 0; j < marks.length; j++) {
+        total += marks[j];
+      }
+
+      // Calculate average
+      var average = total / marks.length;
+
+      alert("Total marks: " + total + "\nAverage marks: " + average.toFixed(2));
+
+      // Display alert based on average
+      if (average > 30) {
+        alert('Congrats! You passed');
+      } else {
+        alert('Better luck next time');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Grade Calculator</h1>
+  <button id="grade-button" onclick="calculateAverage()">Grade</button>
+</body>
+</html>

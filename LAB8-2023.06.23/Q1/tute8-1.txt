@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Color Change</title>
+        <script>
+            function r(){
+                document.bgColor ="red";
+            }
+            function b(){
+                document.bgColor ="blue";
+            }
+            function g(){
+                document.bgColor ="green";
+            }
+            function z(){
+                document.bgColor ="white";
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="button" name="red" value="red" onmouseover="r()" onmouseout="z()">
+            <input type="button" name="blue" value="blue"onmouseover="b()" onmouseout="z()">
+            <input type="button" name="green" value="green"onmouseover="g()" onmouseout="z()">
+        </div>
+    </body>
+</html>

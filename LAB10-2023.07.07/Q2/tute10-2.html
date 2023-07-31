@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Birth Year</title>
+</head>
+<body>
+    <script>
+        function getYearOfBirthFromNIC(nicNumber) {
+            if (nicNumber.length == 12) {
+                var birthYearPrefix = nicNumber.substring(0, 4);
+                var birthYear = birthYearPrefix;
+        
+                return birthYear;
+            } else if (nicNumber.length == 10) {
+                var birthYearPrefix = nicNumber.substring(0, 2);
+                var birthYear = '19' + birthYearPrefix;
+        
+                return birthYear;
+            } else{
+                return "Invalid NIC number format!";
+            }
+        }
+    var nicNumberInput = window.prompt("Enter the NIC number (YYYYXXXXXXXX or YYMMDDXXXV format):");
+    var yearOfBirth = getYearOfBirthFromNIC(nicNumberInput);
+    window.alert("Year of Birth: " + yearOfBirth);
+    </script>
+</body>
+</html>
